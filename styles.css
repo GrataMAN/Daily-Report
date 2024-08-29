@@ -21,9 +21,15 @@ body {
 
 .ayat {
     font-style: italic;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
+    padding: 10px;
+    border: 2px solid #ff9800; /* Цвет рамки */
+    border-radius: 5px;
+    background-color: #1e1e1e; /* Цвет фона аята */
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
 }
-
 .motivation {
     margin-bottom: 30px;
 }
