@@ -1,0 +1,94 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    margin: 20px;
+}
+
+.site-title {
+    background-color: #ff9800;
+    color: #000000;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.ayat {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.motivation {
+    margin-bottom: 30px;
+}
+
+.question {
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    border-color: #ff9800;
+}
+
+.yes-button.active-yes {
+    background-color: #4CAF50; /* Зелёный фон для "Да" */
+    border-color: #4CAF50; /* Зелёная рамка */
+}
+
+.no-button.active-no {
+    background-color: #f44336; /* Красный фон для "Нет" */
+    border-color: #f44336; /* Красная рамка */
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #555;
+    margin: 20px 0;
+}
+
+.result-bar {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.bar {
+    height: 25px;
+    background-color: #555;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bar div {
+    height: 100%;
+    width: 0;
+    background-color: red; /* Начальный цвет шкалы */
+    transition: width 0.5s ease, background-color 0.5s ease;
+}

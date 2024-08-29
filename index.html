@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчёт дня!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="site-title">Отчёт дня!</div>
+        <div class="ayat">Воистину, Аллах не меняет положения людей, пока они не изменят самих себя. Сура 13 Аят 11</div>
+        <div class="motivation" id="motivation"></div>
+            <!-- Вопросы -->
+            <div class="question">
+                <label>1. Выстаивал ночные намазы?</label>
+                <div class="button-group">
+                    <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+                    <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="question">
+                <label>2. Вовремя встал на утренний намаз?</label>
+                <div class="button-group">
+                    <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+                    <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="question">
+                <label>3. Читал утренние азкары?</label>
+                <div class="button-group">
+                    <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+                    <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="question">
+                <label>4. Читал Коран?</label>
+                <div class="button-group">
+                    <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+                    <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="question">
+                <label>5. Встал не позже 07:00?</label>
+                <div class="button-group">
+                    <button type="button" class="yes-button" onclick="updateScore('health', true, this)">Да</button>
+                    <button type="button" class="no-button" onclick="updateScore('health', false, this)">Нет</button>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="question">
+                <label>6. Сделал зарядку и растяжку?</label>
+                <div class="button-group">
+                    <button type="button" class="yes-button" onclick="updateScore('health', true, this)">Да</button>
+                    <button type="button" class="no-button" onclick="updateScore('health', false, this)">Нет</button>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="question">
+                <label>7. Сделал духа намаз?</label>
+                <div class="button-group">
+                    <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+                    <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="question">
+                <label>8. Нормально позавтракал?</label>
+                <div class="button-group">
+                    <button type="button" class="yes-button" onclick="updateScore('health', true, this)">Да</button>
+                    <button type="button" class="no-button" onclick="updateScore('health', false, this)">Нет</button>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="question">
+                <label>9. Вовремя прибыл на работу?</label>
+                <div class="button-group">
+                    <button type="button" class="yes-button" onclick="updateScore('career', true, this)">Да</button>
+                    <button type="button" class="no-button" onclick="updateScore('career', false, this)">Нет</button>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="question">
+                <label>10. Нормально поработал?</label>
+                <div class="button-group">
+                    <button type="button" class="yes-button" onclick="updateScore('career', true, this)">Да</button>
+                    <button type="button" class="no-button" onclick="updateScore('career', false, this)">Нет</button>
+                </div>
+            </div>
+<!-- Вопросы -->
+<div class="question">
+    <label>11. Питался правильно?</label>
+    <div class="button-group">
+        <button type="button" class="yes-button" onclick="updateScore('health', true, this)">Да</button>
+        <button type="button" class="no-button" onclick="updateScore('health', false, this)">Нет</button>
+    </div>
+</div>
+<hr class="divider">
+<div class="question">
+    <label>12. За языком следил?</label>
+    <div class="button-group">
+        <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+        <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+    </div>
+</div>
+<hr class="divider">
+<div class="question">
+    <label>13. Хьарамные движения делал?</label>
+    <div class="button-group">
+        <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+        <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+    </div>
+</div>
+<hr class="divider">
+<div class="question">
+    <label>14. Помог кому-нибудь, чем-нибудь?</label>
+    <div class="button-group">
+        <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+        <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+    </div>
+</div>
+<hr class="divider">
+<div class="question">
+    <label>15. Изучал что-нибудь из религии?</label>
+    <div class="button-group">
+        <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+        <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+    </div>
+</div>
+<hr class="divider">
+<div class="question">
+    <label>16. Читал книги?</label>
+    <div class="button-group">
+        <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+        <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+    </div>
+</div>
+<hr class="divider">
+<div class="question">
+    <label>17. Был вежлив с коллегами и людьми?</label>
+    <div class="button-group">
+        <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+        <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+    </div>
+</div>
+<hr class="divider">
+<div class="question">
+    <label>18. Читал вечерние азкары?</label>
+    <div class="button-group">
+        <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+        <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+    </div>
+</div>
+<hr class="divider">
+<div class="question">
+    <label>19. Был вежлив и почтителен с семьёй?</label>
+    <div class="button-group">
+        <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+        <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+    </div>
+</div>
+<hr class="divider">
+<div class="question">
+    <label>20. Все намазы совершил вовремя?</label>
+    <div class="button-group">
+        <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+        <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+    </div>
+</div>
+<hr class="divider">
+<div class="question">
+    <label>21. Держал пост?</label>
+    <div class="button-group">
+        <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
+        <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+    </div>
+</div>
+<hr class="divider">
+<div class="question">
+    <label>22. Вовремя лёг спать?</label>
+    <div class="button-group">
+        <button type="button" class="yes-button" onclick="updateScore('health', true, this)">Да</button>
+        <button type="button" class="no-button" onclick="updateScore('health', false, this)">Нет</button>
+    </div>
+</div>
+<hr class="divider">
+
+        </form>
+
+        <div id="results">
+            <div class="result-bar">
+                <label>Иман:</label>
+                <div class="bar" id="imanBar"><div></div></div>
+            </div>
+            <div class="result-bar">
+                <label>Здоровье:</label>
+                <div class="bar" id="healthBar"><div></div></div>
+            </div>
+            <div class="result-bar">
+                <label>Карьера:</label>
+                <div class="bar" id="careerBar"><div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
