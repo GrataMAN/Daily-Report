@@ -1,10 +1,10 @@
 // Массив мотивационных сообщений
 const motivations = [
-    "Делай больше, если получается!",
-    "Ты в натуре крассава вац!",
-    "Каждый день — это новый день!",
+    "Если кто-то из вас увидит порицаемое, пусть изменит это своей рукой. А если не может сделать этого рукой, то тогда языком. А если не может и языком, то сердцем, и это будет самым слабым проявлением имана». Сахих Муслим!",
+    "Ты способен на большее, чем думаешь!",
+    "Каждый день — это новый шанс стать лучше!",
     "Не бойся меняться, чтобы стать сильнее!",
-    "Твои усилия сегодня — это твоя грыжа завтра!",
+    "Твои усилия сегодня — это твой успех завтра!",
     "Не сдавайся, даже когда кажется, что всё невозможно!",
     "Ты уже на полпути к своему успеху!",
     "Каждое маленькое усилие ведёт к большим достижениям!",
@@ -12,20 +12,19 @@ const motivations = [
     "Ты способен достичь всего, к чему стремишься!"
 ];
 
-// Функция для выбора случайного мотивационного сообщения
-function getRandomMotivation() {
-    const randomIndex = Math.floor(Math.random() * motivations.length);
-    return motivations[randomIndex];
-}
-
-// Функция для обновления мотивационного сообщения на странице
-function updateMotivation() {
-    const motivationElement = document.getElementById('motivation');
-    motivationElement.textContent = getRandomMotivation();
-}
-
-// Обновление мотивационного сообщения при загрузке страницы
-document.addEventListener('DOMContentLoaded', updateMotivation);
+// Массив аятов
+const ayats = [
+    "Воистину, Аллах не меняет положения людей, пока они не изменят самих себя.",
+    "Кто поступит праведно, будь то мужчина или женщина, и при этом будет веровать, Мы даруем ему жизнь хорошую.",
+    "Всё, что есть на земле, и всё, что есть на небе, славит Его. И Он — Сильный, Мудрый.",
+    "Нет принуждения в религии. Истина явно отделилась от заблуждения.",
+    "Поистине, с трудом приходит облегчение. Поистине, с трудом приходит облегчение.",
+    "И помни Господа твоего в душе твоей с покорностью и страхом, без громких слов, утром и вечером.",
+    "И скажи Моим рабам, чтобы они говорили слово лучше. Воистину, шайтан сеет раздор между ними.",
+    "И повелели людям быть добрыми к родителям. Если один из них или оба доживут до старости, не говори им «фу», не будь грубым с ними, а говори им слова почтения.",
+    "Скажи: «Мой Господь не обращает внимания на вас, если вы не будете молиться Ему».",
+    "Поистине, Аллах — ваш Господь. Нет Бога, кроме Него."
+];
 
 // Переменные для хранения очков
 let imanScore = 0;
@@ -36,6 +35,30 @@ let careerScore = 0;
 const totalImanQuestions = 16;
 const totalHealthQuestions = 6;
 const totalCareerQuestions = 3;
+
+// Функция для выбора случайного мотивационного сообщения
+function getRandomMotivation() {
+    const randomIndex = Math.floor(Math.random() * motivations.length);
+    return motivations[randomIndex];
+}
+
+// Функция для выбора случайного аята
+function getRandomAyat() {
+    const randomIndex = Math.floor(Math.random() * ayats.length);
+    return ayats[randomIndex];
+}
+
+// Функция для обновления мотивационного сообщения на странице
+function updateMotivation() {
+    const motivationElement = document.getElementById('motivation');
+    motivationElement.textContent = getRandomMotivation();
+}
+
+// Функция для обновления аята на странице
+function updateAyat() {
+    const ayatElement = document.getElementById('ayat');
+    ayatElement.textContent = getRandomAyat();
+}
 
 // Функция для обновления шкалы
 function updateScore(category, answer, button) {
@@ -88,3 +111,9 @@ function getColorForPercentage(pct) {
 function handleAnswer(category, answer, button) {
     updateScore(category, answer, button);
 }
+
+// Обновление аята и мотивационного сообщения при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    updateAyat();
+    updateMotivation();
+});
