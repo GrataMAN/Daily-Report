@@ -69,7 +69,7 @@
             </div>
             <hr class="divider">
             <div class="question">
-                <label>8. Нормально позавтракал?</label>
+                <label>8. Завтракал?</label>
                 <div class="button-group">
                     <button type="button" class="yes-button" onclick="updateScore('health', true, this)">Да</button>
                     <button type="button" class="no-button" onclick="updateScore('health', false, this)">Нет</button>
@@ -108,10 +108,10 @@
 </div>
 <hr class="divider">
 <div class="question">
-    <label>13. Узнал что нибудь новое из религии?</label>
+    <label>13. Научился сегодня чему нибудь?</label>
     <div class="button-group">
-        <button type="button" class="yes-button" onclick="updateScore('iman', true, this)">Да</button>
-        <button type="button" class="no-button" onclick="updateScore('iman', false, this)">Нет</button>
+        <button type="button" class="yes-button" onclick="updateScore('career', true, this)">Да</button>
+        <button type="button" class="no-button" onclick="updateScore('career', false, this)">Нет</button>
     </div>
 </div>
 <hr class="divider">
@@ -180,14 +180,22 @@
 </div>
 <hr class="divider">
 <div class="question">
-    <label>22. Вовремя лёг спать?</label>
+      <label>22. Есть планы на завтра?</label>
+                <div class="button-group">
+                    <button type="button" class="yes-button" onclick="updateScore('career', true, this)">Да</button>
+                    <button type="button" class="no-button" onclick="updateScore('career', false, this)">Нет</button>
+                </div>
+            </div>
+        <hr class="divider">
+<div class="question">
+    <label>23. Вовремя лёг спать?</label>
     <div class="button-group">
         <button type="button" class="yes-button" onclick="updateScore('health', true, this)">Да</button>
         <button type="button" class="no-button" onclick="updateScore('health', false, this)">Нет</button>
     </div>
 </div>
 <hr class="divider">
-
+        
         </form>
 
         <div id="results">
