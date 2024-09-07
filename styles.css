@@ -1,96 +1,124 @@
 body {
-    background-color: #121212;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-bottom: 200px; /* Добавляем отступ снизу для видимости шкалы */
+    }
+
+/* Фон заголовка сайта */
+header {
+  background-color: #1E90FF; /* фон заголовка */
+  padding: 20px;
 }
 
-.container {
-    text-align: center;
-    margin: 20px;
+header h1 {
+  color: #FFFFFF; /* Цвет текста заголовка (можно оставить или изменить по желанию) */
+  font-weight: bold;
+   font-size: 3rem; /* Измените размер текста здесь */
 }
 
-.site-title {
-    background-color: #ff9800;
-    color: #000000;
-    font-size: 24px;
-    padding: 10px;
-    margin-bottom: 10px;
+/* блок с аятом */
+.verse {
+  margin: 0px auto;
+  border: 2px solid #1E90FF;
+  padding: 20px;
+  width: 100%;
+  font-size: 1.5rem;
+  background-color: #1E90FF; /* Добавляем цвет фона */
 }
 
-.ayat {
-    font-style: italic;
-    margin-bottom: 100px;
-    padding: 10px;
-    border: 2px solid #ff9800; /* Цвет рамки */
-    border-radius: 5px;
-    background-color: #1e1e1e; /* Цвет фона аята */
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
+.questions {
+  margin: 20px auto;
+  width: 80%;
+}
 
+/* Цвет тонких линий между вопросами */
 .question {
-    margin-bottom: 20px;
-    text-align: left;
-    max-width: 500px;
-    margin: 0 auto 20px;
+  margin: 10px 0;
+  border-bottom: 1px solid #1E90FF; /* цвет для тонких линий */
+  padding: 10px 0;
 }
 
-.button-group {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 button {
-    background-color: #000000;
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+  width: 300px;
+  height: 60px; /* Сделать кнопки квадратными */
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Оставляем небольшие скругленные углы */
+  box-shadow: 0 2px #333; /* Добавляем тень для объёмного эффекта */
+  transition: all 0.2s ease;
 }
 
-button:hover {
-    border-color: #ff9800;
+button:active {
+  box-shadow: 0 2px #111; /* Эффект нажатия */
+  transform: translateY(2px); /* Кнопка как бы "погружается" при нажатии */
 }
 
-.yes-button.active-yes {
-    background-color: #4CAF50; /* Зелёный фон для "Да" */
-    border-color: #4CAF50; /* Зелёная рамка */
+button.green {
+  background-color: #228B22;
 }
 
-.no-button.active-no {
-    background-color: #f44336; /* Красный фон для "Нет" */
-    border-color: #f44336; /* Красная рамка */
+button.red {
+  background-color: #B22222;
 }
 
-.divider {
-    border: none;
-    border-top: 1px solid #555;
-    margin: 20px 0;
+button.green.clicked {
+  background-color: #ADFF2F;
 }
 
-.result-bar {
-    margin-top: 20px;
-    text-align: left;
-    max-width: 500px;
-    margin: 20px auto;
+button.red.clicked {
+  background-color: #FF0000;
 }
 
-.bar {
-    height: 25px;
-    background-color: #555;
-    border-radius: 5px;
-    overflow: hidden;
+.progress-wrapper {
+  position: fixed;
+  bottom: 40px; /* Приподнимаем шкалу от самого низа */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  text-align: center;
 }
 
-.bar div {
-    height: 100%;
-    width: 0;
-    background-color: red; /* Начальный цвет шкалы */
-    transition: width 0.5s ease, background-color 0.5s ease;
+.progress-text {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #1E90FF; /* Цвет рамки */
+  border-radius: 10px; /* Скругление углов рамки */
+  background-color: #1E90FF; /* Цвет фона текста для контраста */
+  display: inline-block; /* Чтобы рамка не растягивалась на всю ширину контейнера */
+}
+
+.progress-container {
+  background-color: #333333; /* Цвет пустой части */
+  border: 2px solid #1E90FF; /* Рамка */
+  border-radius: 15px; /* Скругленные углы */
+  height: 30px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #1E90FF;
+  transition: width 0.5s;
+  border-radius: 15px; /* Скругление для заполненной части */
+}
+
+.motivation {
+  text-align: center;
+  margin: 30px;
+  font-size: 1.5rem;
+  color: #1E90FF;
 }
