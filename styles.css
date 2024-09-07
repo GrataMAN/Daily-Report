@@ -33,18 +33,6 @@ header h1 {
   background-color: #1E90FF; /* Добавляем цвет фона */
 }
 
-.questions {
-  margin: 20px auto;
-  width: 80%;
-}
-
-/* Цвет тонких линий между вопросами */
-.question {
-  margin: 10px 0;
-  border-bottom: 1px solid #1E90FF; /* цвет для тонких линий */
-  padding: 10px 0;
-}
-
 .buttons {
   display: flex;
   justify-content: center;
