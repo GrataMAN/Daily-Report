@@ -31,9 +31,9 @@ let healthScore = 0;
 let careerScore = 0;
 
 // Количество вопросов в каждой категории
-const totalImanQuestions = 16;
+const totalImanQuestions = 13;
 const totalHealthQuestions = 6;
-const totalCareerQuestions = 3;
+const totalCareerQuestions = 4;
 
 // Функция для выбора случайного мотивационного сообщения
 function getRandomMotivation() {
