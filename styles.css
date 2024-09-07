@@ -1,4 +1,8 @@
 body {
+  max-width: 100%;
+  overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+  margin: 0;
+  padding: 0;
   background-color: #1a1a1a;
   color: white;
   text-align: center;
@@ -9,7 +13,7 @@ body {
 
 /* Фон заголовка сайта */
 header {
-  background-color: #1E90FF; /* фон заголовка */
+  background-color: #00BFFF; /* фон заголовка */
   padding: 20px;
 }
 
