@@ -11,6 +11,20 @@ body {
   padding-bottom: 200px; /* Добавляем отступ снизу для видимости шкалы */
     }
 
+/* Блок вопросов */
+.questions {
+  margin: 0 auto; /* Центрируем блок с вопросами */
+  width: 80%; /* Ширина блока вопросов */
+  text-align: center; /* Центрируем текст внутри блока */
+}
+
+/* Сами вопросы */
+.question {
+  text-align: center; /* Центрируем текст вопросов */
+  font-size: 1.2rem; /* Размер шрифта вопросов */
+}
+
+
 /* Фон заголовка сайта */
 header {
   background-color: #00BFFF; /* фон заголовка */
@@ -33,10 +47,11 @@ header h1 {
   background-color: #1E90FF; /* Добавляем цвет фона */
 }
 
+/* Стили для кнопок */
 .buttons {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: center; /* Центрируем кнопки */
+  gap: 10px; /* Расстояние между кнопками */
 }
 
 button {
@@ -46,8 +61,12 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 5px; /* Оставляем небольшие скругленные углы */
-  box-shadow: 0 2px #333; /* Добавляем тень для объёмного эффекта */
   transition: all 0.2s ease;
+  font-size: 20px; /* Изменяет размер шрифта */
+  font-weight: bold; /* Делает текст жирным */
+  color: white; /* Цвет текста */
+  text-transform: uppercase; /* Преобразует текст в верхний регистр */
+}
 }
 
 button:active {
@@ -109,8 +128,9 @@ button.red.clicked {
 }
 
 .motivation {
+  display: none; /* Скрываем мотивацию по умолчанию */
   text-align: center;
-  margin: 30px;
+  margin: 40px;
   font-size: 1.5rem;
   color: #1E90FF;
 }
