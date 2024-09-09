@@ -1,5 +1,6 @@
 let totalQuestions = 30;
 let positiveAnswers = 0;
+let answeredQuestions = 0;
 
 function handleClick(button, type) {
   // Если ответ уже дан, не реагировать
@@ -10,12 +11,15 @@ function handleClick(button, type) {
 
   // Отключить другую кнопку
   let siblingButton = button.nextElementSibling || button.previousElementSibling;
-  siblingButton.classList.add('disabled');
+  if (siblingButton) {
+    siblingButton.classList.add('disabled');
+  }
   
   if (type === 'green') {
     positiveAnswers++;
   }
 
+  answeredQuestions++;
   updateProgress();
 }
 
@@ -24,9 +28,15 @@ function updateProgress() {
   document.getElementById('progress-bar').style.width = progress + '%';
 
   let motivationSection = document.getElementById('motivation');
-  if (progress > 50) {
-    motivationSection.textContent = "Молодец ахи! Продолжай в том же духе!";
+  // Отображать мотивацию, только если все вопросы отвечены
+  if (answeredQuestions === totalQuestions) {
+    if (progress > 50) {
+      motivationSection.textContent = "Молодец ахи! Продолжай в том же духе!";
+    } else {
+      motivationSection.textContent = "Ты моросишь да ахи? чё так плохо всё?!";
+    }
+    motivationSection.style.display = 'block'; // Показываем мотивацию
   } else {
-    motivationSection.textContent = "Не сдавайся ахи, стремись к лучшему!";
+    motivationSection.style.display = 'none'; // Скрываем мотивацию, если не все вопросы отвечены
   }
 }
