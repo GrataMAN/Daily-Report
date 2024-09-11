@@ -6,20 +6,21 @@ function handleClick(button, type) {
   // Если ответ уже дан, не реагировать
   if (button.classList.contains('disabled')) return;
 
-  // Пометить нажатую кнопку как выбранную
+   // Пометить нажатую кнопку как выбранную
   button.classList.add('clicked', 'disabled');
 
   // Отключить другую кнопку
   let siblingButton = button.nextElementSibling || button.previousElementSibling;
-  if (siblingButton) {
-    siblingButton.classList.add('disabled');
-  }
-  
+  if (siblingButton) siblingButton.classList.add('disabled');
+
+  // Увеличиваем количество отвеченных вопросов
+  answeredQuestions++;
+
+  // Если ответ "Да", увеличиваем положительные ответы
   if (type === 'green') {
     positiveAnswers++;
   }
 
-  answeredQuestions++;
   updateProgress();
 }
 
@@ -27,16 +28,25 @@ function updateProgress() {
   let progress = (positiveAnswers / totalQuestions) * 100;
   document.getElementById('progress-bar').style.width = progress + '%';
 
+  // Вычисляем цвет от красного (0%) до зелёного (100%)
+  let redValue = Math.max(255 - Math.round((progress / 100) * 255), 0);
+  let greenValue = Math.min(Math.round((progress / 100) * 255), 255);
+  
+  // Меняем цвет всей шкалы
+  document.getElementById('progress-bar').style.backgroundColor = `rgb(${redValue}, ${greenValue}, 0)`;
+
   let motivationSection = document.getElementById('motivation');
-  // Отображать мотивацию, только если все вопросы отвечены
+  
+  // Мотивация появляется только когда все вопросы отвечены
   if (answeredQuestions === totalQuestions) {
-    if (progress > 50) {
-      motivationSection.textContent = "Молодец ахи! Продолжай в том же духе!";
+    if (progress === 100) {
+      motivationSection.textContent = "Ма ща Аллагь! Ты выполнил все!";
+    } else if (progress > 50) {
+      motivationSection.textContent = "Неплохо, продолжай в том же духе!";
     } else {
-      motivationSection.textContent = "Ты моросишь да ахи? чё так плохо всё?!";
+      motivationSection.textContent = "Плохо дело, но не отчаивайся в милости всевышнего!";
     }
-    motivationSection.style.display = 'block'; // Показываем мотивацию
   } else {
-    motivationSection.style.display = 'none'; // Скрываем мотивацию, если не все вопросы отвечены
+    motivationSection.textContent = ''; // Очищаем мотивацию, если не все ответы даны
   }
 }
