@@ -7,9 +7,26 @@ body {
   color: white;
   text-align: center;
   font-family: Arial, sans-serif;
-  margin: 0;
   padding-bottom: 200px; /* Добавляем отступ снизу для видимости шкалы */
-    }
+}
+
+/* Стили для больших и маленьких текстов */
+.large-text, .small-text {
+  display: block; /* Делает каждый абзац блочным элементом */
+  margin: 0 auto; /* Центрирует каждый абзац */
+  padding: 10px 0; /* Отступы сверху и снизу */
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+  .large-text {
+    font-size: 1.5rem; /* Уменьшает размер шрифта на маленьких экранах */
+  }
+
+  .small-text {
+    font-size: 0.7rem; /* Уменьшает размер шрифта на маленьких экранах */
+  }
+}
 
 /* Блок вопросов */
 .questions {
@@ -24,7 +41,6 @@ body {
   font-size: 1.2rem; /* Размер шрифта вопросов */
 }
 
-
 /* Фон заголовка сайта */
 header {
   background-color: #FFAA00; /* фон заголовка */
@@ -34,16 +50,19 @@ header {
 header h1 {
   color: #FFFFFF; /* Цвет текста заголовка (можно оставить или изменить по желанию) */
   font-weight: bold;
-   font-size: 3rem; /* Измените размер текста здесь */
+  font-size: 3rem; /* Размер текста заголовка */
 }
 
 /* блок с аятом */
 .verse {
-  margin: 0px auto;
+  text-align: center; /* Центрирование текста */
+  padding: 20px; /* Отступы вокруг текста */
+  margin: 0 auto; /* Центрирование блока на странице */
   padding: 20px;
   font-size: 1.5rem;
   font-family: 'Times New Roman', serif; /* Замените на нужный шрифт */
   color: #ffffff; /* Цвет текста */
+  background-color: transparent; /* Убираем фон */
 }
 
 /* Стили для кнопок */
@@ -59,18 +78,12 @@ button {
   padding: 10px;
   border: 2px solid #1E90FF; /* Добавляем рамку: толщина, стиль и цвет */
   cursor: pointer;
-  border-radius: 0px; /* Оставляем небольшие скругленные углы */
-  transition: all 0.2s ease;
-  font-size: 20px; /* Изменяет размер шрифта */
-  font-weight: bold; /* Делает текст жирным */
+  border-radius: 0px; /* Убираем скругленные углы */
+  transition: background-color 0.2s ease; /* Плавное изменение цвета */
+  font-size: 20px; /* Размер шрифта */
+  font-weight: bold; /* Жирный текст */
   color: white; /* Цвет текста */
-  text-transform: uppercase; /* Преобразует текст в верхний регистр */
-}
-}
-
-button:active {
-  box-shadow: 0 2px #111; /* Эффект нажатия */
-  transform: translateY(2px); /* Кнопка как бы "погружается" при нажатии */
+  text-transform: uppercase; /* Верхний регистр */
 }
 
 button.green {
@@ -124,7 +137,7 @@ button.red.clicked {
   height: 100%;
   width: 0;
   transition: width 0.5s, background-color 0.5s; /* Плавная анимация */
-  border-radius: 15px;
+  border-radius: 15px; /* Скругление для заполненной части */
 }
 
 .motivation {
