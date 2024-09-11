@@ -27,7 +27,7 @@ body {
 
 /* Фон заголовка сайта */
 header {
-  background-color: #00BFFF; /* фон заголовка */
+  background-color: #FFAA00; /* фон заголовка */
   padding: 20px;
 }
 
@@ -40,27 +40,26 @@ header h1 {
 /* блок с аятом */
 .verse {
   margin: 0px auto;
-  border: 2px solid #1E90FF;
   padding: 20px;
-  width: 100%;
   font-size: 1.5rem;
-  background-color: #1E90FF; /* Добавляем цвет фона */
+  font-family: 'Times New Roman', serif; /* Замените на нужный шрифт */
+  color: #ffffff; /* Цвет текста */
 }
 
 /* Стили для кнопок */
 .buttons {
   display: flex;
   justify-content: center; /* Центрируем кнопки */
-  gap: 10px; /* Расстояние между кнопками */
+  gap: 3px; /* Расстояние между кнопками */
 }
 
 button {
-  width: 300px;
+  width: 250px;
   height: 60px; /* Сделать кнопки квадратными */
   padding: 10px;
-  border: none;
+  border: 2px solid #1E90FF; /* Добавляем рамку: толщина, стиль и цвет */
   cursor: pointer;
-  border-radius: 5px; /* Оставляем небольшие скругленные углы */
+  border-radius: 0px; /* Оставляем небольшие скругленные углы */
   transition: all 0.2s ease;
   font-size: 20px; /* Изменяет размер шрифта */
   font-weight: bold; /* Делает текст жирным */
@@ -75,19 +74,21 @@ button:active {
 }
 
 button.green {
-  background-color: #228B22;
+  background-color: #1a1a1a;
+  border-color: #007439; /* Цвет рамки для зеленой кнопки */
 }
 
 button.red {
-  background-color: #B22222;
+  background-color: #1a1a1a;
+  border-color: #94002D; /* Цвет рамки для красной кнопки */
 }
 
 button.green.clicked {
-  background-color: #ADFF2F;
+  background-color: #00B358;
 }
 
 button.red.clicked {
-  background-color: #FF0000;
+  background-color: #BF3030;
 }
 
 .progress-wrapper {
@@ -104,15 +105,15 @@ button.red.clicked {
   color: white;
   margin-bottom: 10px;
   padding: 10px;
-  border: 2px solid #1E90FF; /* Цвет рамки */
+  border: 2px solid #FFAA00; /* Цвет рамки */
   border-radius: 10px; /* Скругление углов рамки */
-  background-color: #1E90FF; /* Цвет фона текста для контраста */
+  background-color: #FFAA00; /* Цвет фона текста для контраста */
   display: inline-block; /* Чтобы рамка не растягивалась на всю ширину контейнера */
 }
 
 .progress-container {
   background-color: #333333; /* Цвет пустой части */
-  border: 2px solid #1E90FF; /* Рамка */
+  border: 2px solid #FFAA00; /* Рамка */
   border-radius: 15px; /* Скругленные углы */
   height: 30px;
   width: 100%;
@@ -122,9 +123,8 @@ button.red.clicked {
 #progress-bar {
   height: 100%;
   width: 0;
-  background-color: #1E90FF;
-  transition: width 0.5s;
-  border-radius: 15px; /* Скругление для заполненной части */
+  transition: width 0.5s, background-color 0.5s; /* Плавная анимация */
+  border-radius: 15px;
 }
 
 .motivation {
