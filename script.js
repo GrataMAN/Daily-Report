@@ -4,14 +4,17 @@ let answeredQuestions = 0;
 
 function handleClick(button, type) {
   // Если ответ уже дан, не реагировать
-  if (button.classList.contains('disabled')) return;
+  if (button.classList.contains('clicked')) return;
 
-   // Пометить нажатую кнопку как выбранную
-  button.classList.add('clicked', 'disabled');
+  // Пометить нажатую кнопку как выбранную
+  button.classList.add('clicked');
+  button.disabled = true; // Блокируем нажатую кнопку
 
   // Отключить другую кнопку
   let siblingButton = button.nextElementSibling || button.previousElementSibling;
-  if (siblingButton) siblingButton.classList.add('disabled');
+  if (siblingButton && !siblingButton.classList.contains('clicked')) {
+    siblingButton.disabled = true; // Блокируем кнопку, которая не была нажата
+  }
 
   // Увеличиваем количество отвеченных вопросов
   answeredQuestions++;
@@ -25,7 +28,7 @@ function handleClick(button, type) {
 }
 
 function updateProgress() {
-  let progress = (positiveAnswers / totalQuestions) * 100;
+  let progress = (answeredQuestions / totalQuestions) * 100;
   document.getElementById('progress-bar').style.width = progress + '%';
 
   // Вычисляем цвет от красного (0%) до зелёного (100%)
@@ -46,7 +49,9 @@ function updateProgress() {
     } else {
       motivationSection.textContent = "Плохо дело, но не отчаивайся в милости всевышнего!";
     }
+    motivationSection.style.display = 'block'; // Показываем мотивацию
   } else {
     motivationSection.textContent = ''; // Очищаем мотивацию, если не все ответы даны
+    motivationSection.style.display = 'none'; // Скрываем мотивацию
   }
 }
