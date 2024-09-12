@@ -10,10 +10,12 @@ function handleClick(button, type) {
   button.classList.add('clicked');
   button.disabled = true; // Блокируем нажатую кнопку
 
-  // Отключить другую кнопку
-  let siblingButton = button.nextElementSibling || button.previousElementSibling;
-  if (siblingButton && !siblingButton.classList.contains('clicked')) {
-    siblingButton.disabled = true; // Блокируем кнопку, которая не была нажата
+  // Отключаем соседнюю кнопку
+  let buttons = button.parentElement.children; // Получаем все кнопки в контейнере
+  for (let btn of buttons) {
+    if (btn !== button && !btn.classList.contains('clicked')) {
+      btn.disabled = true; // Блокируем кнопку, которая не была нажата
+    }
   }
 
   // Увеличиваем количество отвеченных вопросов
