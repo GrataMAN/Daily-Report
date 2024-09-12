@@ -24,11 +24,13 @@ function handleClick(button, type) {
     positiveAnswers++;
   }
 
+  // Обновляем прогресс
   updateProgress();
 }
 
 function updateProgress() {
-  let progress = (answeredQuestions / totalQuestions) * 100;
+  // Прогресс вычисляется только на основе положительных ответов
+  let progress = (positiveAnswers / totalQuestions) * 100;
   document.getElementById('progress-bar').style.width = progress + '%';
 
   // Вычисляем цвет от красного (0%) до зелёного (100%)
