@@ -156,13 +156,13 @@
         <div id="mainMenu" class="flex justify-center mb-8">
             <div class="parchment-bg rounded-xl shadow-lg p-6 flex flex-wrap gap-4 justify-center max-w-full">
                 <button onclick="showMainSection('lessons')" id="lessonsMainBtn" class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg">
-                    الدروس / Уроки
+                    Уроки
                 </button>
                 <button onclick="showMainSection('globalQuiz')" id="globalQuizMainBtn" class="btn-secondary px-8 py-4 rounded-lg font-semibold text-lg">
-                    الاختبار / Викторина
+                    Викторина
                 </button>
                 <button onclick="showMainSection('globalDictionary')" id="globalDictMainBtn" class="btn-secondary px-8 py-4 rounded-lg font-semibold text-lg">
-                    القاموس / Словарь
+                    Словарь
                 </button>
             </div>
         </div>
@@ -172,9 +172,8 @@
             <!-- Lesson Selection -->
             <div class="parchment-bg ornament-border rounded-xl p-8 mb-8">
                 <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">الدروس</h2>
+                    <h2 class="text-3xl font-bold text-burgundy mb-2">Выберите урок</h2>
                     <div class="decorative-line w-32 mx-auto"></div>
-                    <h3 class="text-2xl font-semibold text-burgundy">Выберите урок</h3>
                 </div>
                 
                 <div class="grid md:grid-cols-3 gap-6">
@@ -227,6 +226,13 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Back button at bottom -->
+            <div class="text-center mt-8">
+                <button onclick="backToMain()" class="btn-secondary px-8 py-4 rounded-lg font-semibold">
+                    Назад
+                </button>
+            </div>
         </div>
 
         <!-- Individual Lesson View -->
@@ -248,10 +254,10 @@
             <div class="flex justify-center mb-8">
                 <div class="parchment-bg rounded-xl shadow-lg p-3 flex flex-wrap gap-2 justify-center max-w-full">
                     <button onclick="showLessonSection('cards')" id="cardsBtn" class="btn-primary px-6 py-3 rounded-lg font-semibold">
-                        المفردات / Слова
+                        Слова
                     </button>
                     <button onclick="showLessonSection('lessonQuiz')" id="lessonQuizBtn" class="btn-secondary px-6 py-3 rounded-lg font-semibold">
-                        اختبار الدرس / Викторина урока
+                        Пройти тест
                     </button>
                 </div>
             </div>
@@ -260,9 +266,8 @@
             <div id="cardsSection" class="lesson-section">
                 <div class="parchment-bg ornament-border rounded-xl p-8 mb-6">
                     <div class="text-center mb-8">
-                        <h3 class="text-2xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">مفردات الدرس</h3>
+                        <h3 class="text-2xl font-bold text-burgundy mb-2">Словарь урока</h3>
                         <div class="decorative-line w-32 mx-auto"></div>
-                        <h4 class="text-xl font-semibold text-burgundy">Словарь урока</h4>
                     </div>
 
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4" id="wordsGrid">
@@ -275,9 +280,8 @@
             <div id="lessonQuizSection" class="lesson-section hidden">
                 <div class="parchment-bg ornament-border rounded-xl p-8">
                     <div class="text-center mb-8">
-                        <h2 class="text-3xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">اختبار الدرس</h2>
+                        <h2 class="text-3xl font-bold text-burgundy mb-2">Тест урока</h2>
                         <div class="decorative-line w-32 mx-auto"></div>
-                        <h3 class="text-2xl font-semibold text-burgundy mb-4">Викторина урока</h3>
                         <p class="text-sepia text-lg">Вопрос <span id="lessonQuizCounter" class="text-gold font-bold">1</span> из <span id="totalLessonQuizzes" class="text-burgundy font-bold">5</span></p>
                         <div class="w-full bg-parchment-dark rounded-full h-3 mt-6 border border-gold">
                             <div id="lessonQuizProgressBar" class="progress-bar h-3 rounded-full" style="width: 20%"></div>
@@ -286,7 +290,7 @@
 
                     <div id="lessonQuizContent" class="text-center">
                         <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-6 text-ink">ترجم إلى الروسية / Переведите на русский:</h3>
+                            <h3 class="text-xl font-semibold mb-6 text-ink">Переведите на русский:</h3>
                             <div class="bg-gradient-to-br from-gold to-burgundy border-3 border-gold rounded-xl p-8 mb-6 max-w-md mx-auto shadow-lg">
                                 <div id="lessonQuizQuestion" class="arabic text-4xl text-parchment font-bold text-shadow">هُوَ كَبِير</div>
                             </div>
@@ -300,7 +304,7 @@
                     <div id="lessonQuizResult" class="hidden text-center mt-8">
                         <div id="lessonResultMessage" class="text-xl font-semibold mb-6"></div>
                         <button onclick="startLessonQuiz()" class="btn-primary px-8 py-3 rounded-lg font-semibold">
-                            ابدأ من جديد / Начать заново
+                            Начать заново
                         </button>
                     </div>
                 </div>
@@ -311,14 +315,13 @@
         <div id="globalQuizSection" class="main-section hidden">
             <div class="parchment-bg ornament-border rounded-xl p-8">
                 <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">الاختبار الشامل</h2>
+                    <h2 class="text-3xl font-bold text-burgundy mb-2">Общая викторина</h2>
                     <div class="decorative-line w-32 mx-auto"></div>
-                    <h3 class="text-2xl font-semibold text-burgundy mb-4">Общая викторина</h3>
                     <p class="text-sepia text-lg mb-6">Предложения из всех пройденных уроков</p>
                     
                     <div class="flex justify-center mb-6">
                         <button onclick="backToMain()" class="btn-secondary px-6 py-3 rounded-lg font-semibold">
-                            العودة / Назад
+                            Назад
                         </button>
                     </div>
                     
@@ -330,7 +333,7 @@
 
                 <div id="globalQuizContent" class="text-center">
                     <div class="mb-8">
-                        <h3 id="globalQuizType" class="text-xl font-semibold mb-6 text-ink">ترجم إلى الروسية / Переведите на русский:</h3>
+                        <h3 id="globalQuizType" class="text-xl font-semibold mb-6 text-ink">Переведите на русский:</h3>
                         <div class="bg-gradient-to-br from-gold to-burgundy border-3 border-gold rounded-xl p-8 mb-6 max-w-2xl mx-auto shadow-lg">
                             <div id="globalQuizQuestion" class="arabic text-4xl text-parchment font-bold text-shadow">هُوَ كَبِير</div>
                         </div>
@@ -342,24 +345,19 @@
                     
                     <div id="wordOrderContainer" class="hidden max-w-2xl mx-auto">
                         <div class="mb-6">
-                            <h4 class="text-lg font-semibold text-burgundy mb-4">رتب الكلمات / Расставьте слова по порядку:</h4>
+                            <h4 class="text-lg font-semibold text-burgundy mb-4">Расставьте слова по порядку:</h4>
                             <div id="wordBank" class="flex flex-wrap justify-center gap-3 mb-6 p-4 bg-parchment-dark rounded-lg border-2 border-sepia">
                                 <!-- Word buttons will be populated by JavaScript -->
                             </div>
                         </div>
                         <div class="mb-6">
-                            <h4 class="text-lg font-semibold text-burgundy mb-4">الجملة المرتبة / Составленное предложение:</h4>
+                            <h4 class="text-lg font-semibold text-burgundy mb-4">Составленное предложение:</h4>
                             <div id="sentenceBuilder" class="min-h-16 p-4 bg-parchment rounded-lg border-2 border-gold flex flex-wrap gap-2 justify-center items-center">
-                                <span class="text-sepia italic">اسحب الكلمات هنا / Перетащите слова сюда</span>
+                                <span class="text-sepia italic">Перетащите слова сюда</span>
                             </div>
                         </div>
-                        <div class="flex justify-center gap-4">
-                            <button onclick="clearSentence()" class="btn-secondary px-6 py-3 rounded-lg font-semibold">
-                                مسح / Очистить
-                            </button>
-                            <button onclick="checkWordOrder()" class="btn-primary px-6 py-3 rounded-lg font-semibold">
-                                تحقق / Проверить
-                            </button>
+                        <div class="text-center">
+                            <p class="text-sepia italic">Выберите слова в правильном порядке</p>
                         </div>
                     </div>
                 </div>
@@ -367,9 +365,16 @@
                 <div id="globalQuizResult" class="hidden text-center mt-8">
                     <div id="globalResultMessage" class="text-xl font-semibold mb-6"></div>
                     <button onclick="nextGlobalQuiz()" class="btn-primary px-8 py-3 rounded-lg font-semibold">
-                        السؤال التالي / Следующий вопрос
+                        Следующий вопрос
                     </button>
                 </div>
+            </div>
+            
+            <!-- Back button at bottom -->
+            <div class="text-center mt-8">
+                <button onclick="backToMain()" class="btn-secondary px-8 py-4 rounded-lg font-semibold">
+                    Назад
+                </button>
             </div>
         </div>
 
@@ -377,21 +382,16 @@
         <div id="globalDictionarySection" class="main-section hidden">
             <div class="parchment-bg ornament-border rounded-xl p-8">
                 <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">القاموس الشامل</h2>
+                    <h2 class="text-3xl font-bold text-burgundy mb-2">Общий словарь</h2>
                     <div class="decorative-line w-32 mx-auto"></div>
-                    <h3 class="text-2xl font-semibold text-burgundy mb-6">Общий словарь</h3>
                     
-                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
-                        <button onclick="backToMain()" class="btn-secondary px-6 py-3 rounded-lg font-semibold">
-                            العودة / Назад
-                        </button>
-                        
+                    <div class="flex justify-center items-center gap-4 mb-6">
                         <div class="flex gap-2">
                             <button onclick="showDictionaryMode('list')" id="listModeBtn" class="btn-primary px-4 py-2 rounded-lg font-medium text-sm">
-                                قاموس / Словарь
+                                Словарь
                             </button>
                             <button onclick="showDictionaryMode('cards')" id="cardsModeBtn" class="btn-secondary px-4 py-2 rounded-lg font-medium text-sm">
-                                بطاقات / Карточки
+                                Карточки
                             </button>
                         </div>
                     </div>
@@ -456,6 +456,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Back button at bottom -->
+            <div class="text-center mt-8">
+                <button onclick="backToMain()" class="btn-secondary px-8 py-4 rounded-lg font-semibold">
+                    Назад
+                </button>
             </div>
         </div>
     </div>
@@ -713,17 +720,14 @@
             document.querySelectorAll('.lesson-section').forEach(s => s.classList.add('hidden'));
             
             // Remove active class from lesson buttons
-            document.getElementById('cardsBtn').className = 'btn-secondary px-6 py-3 rounded-lg font-semibold';
-            document.getElementById('lessonQuizBtn').className = 'btn-secondary px-6 py-3 rounded-lg font-semibold';
+            document.getElementById('cardsBtn').className = 'btn-primary px-6 py-3 rounded-lg font-semibold';
             
-            // Show selected section and activate button
+            // Show selected section
             document.getElementById(section + 'Section').classList.remove('hidden');
             
             if (section === 'cards') {
-                document.getElementById('cardsBtn').className = 'btn-primary px-6 py-3 rounded-lg font-semibold';
                 populateWordsGrid();
             } else if (section === 'lessonQuiz') {
-                document.getElementById('lessonQuizBtn').className = 'btn-primary px-6 py-3 rounded-lg font-semibold';
                 startLessonQuiz();
             }
         }
@@ -898,11 +902,11 @@
                 }
             }
             
-            // Auto-advance to next question quickly
+            // Auto-advance to next question immediately
             setTimeout(() => {
                 currentQuizIndex++;
                 generateLessonQuiz();
-            }, 400);
+            }, 800);
         }
 
 
@@ -973,14 +977,8 @@
             document.getElementById('globalQuizCounter').textContent = currentGlobalQuizIndex + 1;
             document.getElementById('totalGlobalQuizzes').textContent = totalGlobalQuizzes;
             
-            // Randomly choose quiz type: translation or word order
-            const quizType = Math.random() < 0.5 ? 'translation' : 'wordOrder';
-            
-            if (quizType === 'translation') {
-                generateTranslationQuiz(sentence);
-            } else {
-                generateWordOrderQuiz(sentence);
-            }
+            // Only word order quiz
+            generateWordOrderQuiz(sentence);
             
             // Update progress
             const progress = ((currentGlobalQuizIndex + 1) / totalGlobalQuizzes) * 100;
@@ -1054,6 +1052,13 @@
             document.getElementById(`word-${index}`).style.display = 'none';
             
             updateSentenceBuilder();
+            
+            // Auto-check when all words are selected
+            if (selectedWords.length === currentSentenceWords.length) {
+                setTimeout(() => {
+                    checkWordOrderAuto();
+                }, 500);
+            }
         }
 
         function updateSentenceBuilder() {
@@ -1098,6 +1103,52 @@
             selectGlobalAnswer(userSentence, correctSentence);
         }
 
+        function checkWordOrderAuto() {
+            const correctSentence = currentSentenceWords.join(' ');
+            const userSentence = selectedWords.join(' ');
+            const isCorrect = userSentence === correctSentence;
+            
+            const builder = document.getElementById('sentenceBuilder');
+            const wordBank = document.getElementById('wordBank');
+            
+            if (isCorrect) {
+                globalQuizScore++;
+                builder.style.backgroundColor = '#22c55e';
+                builder.style.borderColor = '#16a34a';
+                builder.style.boxShadow = '0 0 20px rgba(34, 197, 94, 0.6)';
+                wordBank.style.pointerEvents = 'none';
+                
+                setTimeout(() => {
+                    // Reset styles before moving to next question
+                    builder.style.backgroundColor = '';
+                    builder.style.borderColor = '#FFD700';
+                    builder.style.boxShadow = '';
+                    wordBank.style.pointerEvents = 'auto';
+                    
+                    currentGlobalQuizIndex++;
+                    generateGlobalQuiz();
+                }, 1000);
+            } else {
+                builder.style.backgroundColor = '#ef4444';
+                builder.style.borderColor = '#dc2626';
+                builder.style.boxShadow = '0 0 20px rgba(239, 68, 68, 0.6)';
+                wordBank.style.pointerEvents = 'none';
+                
+                setTimeout(() => {
+                    // Reset for retry
+                    builder.style.backgroundColor = '';
+                    builder.style.borderColor = '#FFD700';
+                    builder.style.boxShadow = '';
+                    wordBank.style.pointerEvents = 'auto';
+                    selectedWords = [];
+                    document.querySelectorAll('#wordBank button').forEach(btn => {
+                        btn.style.display = 'inline-block';
+                    });
+                    updateSentenceBuilder();
+                }, 1000);
+            }
+        }
+
         function selectGlobalAnswer(selected, correct) {
             const isCorrect = selected === correct;
             if (isCorrect) globalQuizScore++;
@@ -1131,11 +1182,11 @@
                 }
             }
             
-            // Auto-advance to next question quickly
+            // Auto-advance to next question
             setTimeout(() => {
                 currentGlobalQuizIndex++;
                 generateGlobalQuiz();
-            }, 400);
+            }, 800);
         }
 
         function nextGlobalQuiz() {
@@ -1464,5 +1515,5 @@
         // Initialize the application
         initApp();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c6d88c17e33410',t:'MTc1NzQyMjU4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c6ece857be3820',t:'MTc1NzQyMzQyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
