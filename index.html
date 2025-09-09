@@ -176,7 +176,7 @@
                     <div class="decorative-line w-32 mx-auto"></div>
                 </div>
                 
-                <div class="grid md:grid-cols-3 gap-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     <div class="parchment-bg border-2 border-gold rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer" onclick="enterLesson(1)">
                         <div class="text-center">
                             <h3 class="text-xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">الدرس الأول</h3>
@@ -222,6 +222,38 @@
                             <h3 class="text-xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">الدرس السادس</h3>
                             <h4 class="text-lg font-semibold text-burgundy mb-3">Урок 6</h4>
                             <p class="text-sepia text-sm">أَيْنَ؟<br>Где?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="parchment-bg border-2 border-gold rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer" onclick="enterLesson(7)">
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">الدرس السابع</h3>
+                            <h4 class="text-lg font-semibold text-burgundy mb-3">Урок 7</h4>
+                            <p class="text-sepia text-sm">الصحف والمجلات<br>Газеты и журналы</p>
+                        </div>
+                    </div>
+                    
+                    <div class="parchment-bg border-2 border-gold rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer" onclick="enterLesson(8)">
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">الدرس الثامن</h3>
+                            <h4 class="text-lg font-semibold text-burgundy mb-3">Урок 8</h4>
+                            <p class="text-sepia text-sm">الحيوانات والأسئلة<br>Животные и вопросы</p>
+                        </div>
+                    </div>
+                    
+                    <div class="parchment-bg border-2 border-gold rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer" onclick="enterLesson(9)">
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">الدرس التاسع</h3>
+                            <h4 class="text-lg font-semibold text-burgundy mb-3">Урок 9</h4>
+                            <p class="text-sepia text-sm">الأوامر<br>Команды</p>
+                        </div>
+                    </div>
+                    
+                    <div class="parchment-bg border-2 border-gold rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer" onclick="enterLesson(10)">
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">الدرس العاشر</h3>
+                            <h4 class="text-lg font-semibold text-burgundy mb-3">Урок 10</h4>
+                            <p class="text-sepia text-sm">الأفعال والأوامر<br>Глаголы и команды</p>
                         </div>
                     </div>
                 </div>
@@ -626,6 +658,102 @@
                     { arabic: 'الْمُعَلِّمُ فِي الْفَصْلِ', russian: 'Учитель в классе' },
                     { arabic: 'التِّلْمِيذُ فِي الْمَدْرَسَةِ', russian: 'Ученик в школе' }
                 ]
+            },
+            7: {
+                title: { arabic: 'الدَّرْسُ السَّابِعُ: الصُّحُفُ وَالْمَجَلَّاتُ', russian: 'Урок седьмой: Газеты и журналы' },
+                words: [
+                    { arabic: 'جَرِيدَةٌ', russian: 'газета', type: 'существительное' },
+                    { arabic: 'مَجَلَّةٌ', russian: 'журнал', type: 'существительное' },
+                    { arabic: 'عَرَبِيٌّ', russian: 'арабский, араб', type: 'прилагательное' },
+                    { arabic: 'رُوسِيٌّ', russian: 'русский', type: 'прилагательное' },
+                    { arabic: 'جَمِيلٌ', russian: 'красивый', type: 'прилагательное' },
+                    { arabic: 'وَ', russian: 'и', type: 'союз' },
+                    { arabic: 'لَهُ', russian: 'у него, его', type: 'предложная фраза' },
+                    { arabic: 'لَهَا', russian: 'у неё, её', type: 'предложная фраза' },
+                    { arabic: 'لَكَ', russian: 'у тебя, твой', type: 'предложная фраза' },
+                    { arabic: 'لَكِ', russian: 'у тебя, твой (ж.р.)', type: 'предложная фраза' },
+                    { arabic: 'لِي', russian: 'у меня, мой', type: 'предложная фраза' }
+                ],
+                sentences: [
+                    { arabic: 'هَٰذَا كِتَابٌ وَ دَفْتَرٌ', russian: 'Это книга и тетрадь' },
+                    { arabic: 'لَهُ كِتَابٌ', russian: 'У него книга' },
+                    { arabic: 'لَهَا مَجَلَّةٌ', russian: 'У неё журнал' },
+                    { arabic: 'لَكَ قَلَمٌ', russian: 'У тебя ручка' },
+                    { arabic: 'لَكِ دَفْتَرٌ', russian: 'У тебя тетрадь' },
+                    { arabic: 'لِي جَرِيدَةٌ', russian: 'У меня газета' },
+                    { arabic: 'هَٰذِهِ جَرِيدَةٌ عَرَبِيَّةٌ', russian: 'Это арабская газета' },
+                    { arabic: 'هَٰذِهِ مَجَلَّةٌ رُوسِيَّةٌ', russian: 'Это русский журнал' }
+                ]
+            },
+            8: {
+                title: { arabic: 'الدَّرْسُ الثَّامِنُ: الْحَيَوَانَاتُ وَالْأَسْئِلَةُ', russian: 'Урок восьмой: Животные и вопросы' },
+                words: [
+                    { arabic: 'كَلْبٌ', russian: 'собака', type: 'существительное' },
+                    { arabic: 'دِيكٌ', russian: 'петух', type: 'существительное' },
+                    { arabic: 'دَجَاجَةٌ', russian: 'курица', type: 'существительное' },
+                    { arabic: 'مَكْتَبَةٌ', russian: 'библиотека, книжный магазин', type: 'существительное' },
+                    { arabic: 'هَلْ', russian: 'ли (вопросительная частица)', type: 'частица' },
+                    { arabic: 'نَعَمْ', russian: 'да', type: 'частица' },
+                    { arabic: 'لَا', russian: 'нет', type: 'частица' },
+                    { arabic: 'لَيْسَ', russian: 'он не (есть)', type: 'отрицание' },
+                    { arabic: 'لَيْسَتْ', russian: 'она не (есть)', type: 'отрицание' }
+                ],
+                sentences: [
+                    { arabic: 'هَلْ هَٰذَا كَلْبٌ؟', russian: 'Это собака?' },
+                    { arabic: 'نَعَمْ، هَٰذَا كَلْبٌ', russian: 'Да, это собака' },
+                    { arabic: 'هَلْ هَٰذِهِ دَجَاجَةٌ؟', russian: 'Это курица?' },
+                    { arabic: 'لَا، لَيْسَتْ دَجَاجَةً', russian: 'Нет, это не курица' },
+                    { arabic: 'هَلْ هَٰذَا دِيكٌ؟', russian: 'Это петух?' },
+                    { arabic: 'نَعَمْ، هَٰذَا دِيكٌ', russian: 'Да, это петух' },
+                    { arabic: 'هَلْ هَٰذِهِ مَكْتَبَةٌ؟', russian: 'Это библиотека?' },
+                    { arabic: 'لَا، لَيْسَتْ مَكْتَبَةً', russian: 'Нет, это не библиотека' }
+                ]
+            },
+            9: {
+                title: { arabic: 'الدَّرْسُ التَّاسِعُ: الْأَوَامِرُ', russian: 'Урок девятый: Команды' },
+                words: [
+                    { arabic: 'دَرْسٌ', russian: 'урок', type: 'существительное' },
+                    { arabic: 'اِقْرَأْ', russian: '(ты) читай', type: 'глагол повелительного наклонения' },
+                    { arabic: 'اِقْرَئِي', russian: '(ты) читай (ж.р.)', type: 'глагол повелительного наклонения' },
+                    { arabic: 'اُدْخُلْ', russian: 'войди', type: 'глагол повелительного наклонения' },
+                    { arabic: 'اُخْرُجْ', russian: 'выйди', type: 'глагол повелительного наклонения' },
+                    { arabic: 'اُكْتُبْ', russian: 'пиши', type: 'глагол повелительного наклонения' },
+                    { arabic: 'يَا', russian: 'о! эй! (частица обращения)', type: 'частица' },
+                    { arabic: 'مِنْ', russian: 'из, от (предлог)', type: 'предлог' }
+                ],
+                sentences: [
+                    { arabic: 'يَا مُحَمَّدُ، اِقْرَأْ', russian: 'О Мухаммад, читай' },
+                    { arabic: 'يَا فَاطِمَةُ، اِقْرَئِي', russian: 'О Фатима, читай' },
+                    { arabic: 'مِنَ الْبَيْتِ', russian: 'Из дома' },
+                    { arabic: 'اُدْخُلْ', russian: 'Войди' },
+                    { arabic: 'اُخْرُجْ', russian: 'Выйди' },
+                    { arabic: 'اُكْتُبْ', russian: 'Пиши' },
+                    { arabic: 'اِقْرَأْ الدَّرْسَ', russian: 'Читай урок' },
+                    { arabic: 'اُكْتُبْ مِنَ الْكِتَابِ', russian: 'Пиши из книги' }
+                ]
+            },
+            10: {
+                title: { arabic: 'الدَّرْسُ الْعَاشِرُ: الْأَفْعَالُ وَالْأَوَامِرُ', russian: 'Урок десятый: Глаголы и команды' },
+                words: [
+                    { arabic: 'مَقْعَدُ التِّلْمِيذِ', russian: 'парта', type: 'существительное' },
+                    { arabic: 'يَقْرَأُ', russian: 'читает', type: 'глагол настоящего времени' },
+                    { arabic: 'يَكْتُبُ', russian: 'пишет', type: 'глагол настоящего времени' },
+                    { arabic: 'خُذْ', russian: 'на, бери (м.р.)', type: 'глагол повелительного наклонения' },
+                    { arabic: 'خُذِي', russian: 'на, бери (ж.р.)', type: 'глагол повелительного наклонения' },
+                    { arabic: 'هَاتِ', russian: 'дай (м.р.)', type: 'глагол повелительного наклонения' },
+                    { arabic: 'هَاتِي', russian: 'дай (ж.р.)', type: 'глагол повелительного наклонения' },
+                    { arabic: 'كُرْسِيٌّ', russian: 'стул', type: 'существительное' }
+                ],
+                sentences: [
+                    { arabic: 'التِّلْمِيذُ يَقْرَأُ', russian: 'Ученик читает' },
+                    { arabic: 'التِّلْمِيذُ يَكْتُبُ', russian: 'Ученик пишет' },
+                    { arabic: 'خُذْ هَٰذَا الْكِتَابَ', russian: 'Возьми эту книгу' },
+                    { arabic: 'خُذِي هَٰذَا الدَّفْتَرَ', russian: 'Возьми эту тетрадь' },
+                    { arabic: 'هَاتِ الْقَلَمَ', russian: 'Дай ручку' },
+                    { arabic: 'هَاتِي الْمِحْفَظَةَ', russian: 'Дай портфель' },
+                    { arabic: 'هَٰذَا كُرْسِيٌّ', russian: 'Это стул' },
+                    { arabic: 'هَٰذَا مَقْعَدُ التِّلْمِيذِ', russian: 'Это парта ученика' }
+                ]
             }
         };
 
@@ -953,7 +1081,7 @@
             
             // Collect all sentences from completed lessons
             globalQuizQuestions = [];
-            for (let i = 1; i <= 6; i++) {
+            for (let i = 1; i <= 10; i++) {
                 globalQuizQuestions.push(...lessonsData[i].sentences);
             }
             
@@ -994,7 +1122,7 @@
             // Generate options
             const correctAnswer = sentence.russian;
             const allSentences = [];
-            for (let i = 1; i <= 6; i++) {
+            for (let i = 1; i <= 10; i++) {
                 allSentences.push(...lessonsData[i].sentences);
             }
             
@@ -1246,7 +1374,7 @@
         function populateDictionaryList() {
             // Collect words only from completed lessons
             const allWords = [];
-            for (let lessonNum = 1; lessonNum <= 6; lessonNum++) {
+            for (let lessonNum = 1; lessonNum <= 10; lessonNum++) {
                 // Only include words from completed lessons
                 if (lessonCompletion[lessonNum]) {
                     lessonsData[lessonNum].words.forEach((word, index) => {
@@ -1301,7 +1429,7 @@
             availableDictCards = [];
             const now = Date.now();
             
-            for (let lessonNum = 1; lessonNum <= 6; lessonNum++) {
+            for (let lessonNum = 1; lessonNum <= 10; lessonNum++) {
                 // Only include words from completed lessons
                 if (lessonCompletion[lessonNum]) {
                     lessonsData[lessonNum].words.forEach((word, index) => {
@@ -1449,7 +1577,7 @@
             }
             
             // Initialize stats for all lessons
-            for (let lessonNum = 1; lessonNum <= 6; lessonNum++) {
+            for (let lessonNum = 1; lessonNum <= 10; lessonNum++) {
                 lessonsData[lessonNum].words.forEach((word, index) => {
                     const key = `lesson${lessonNum}_${index}`;
                     if (!cardStats[key]) {
@@ -1515,5 +1643,5 @@
         // Initialize the application
         initApp();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c6ece857be3820',t:'MTc1NzQyMzQyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c714c0a2c09295',t:'MTc1NzQyNTA1NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
