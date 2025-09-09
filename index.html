@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Изучение арабского языка</title>
+    <title>Учебник арабского языка</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
@@ -20,11 +20,11 @@
         
         body { 
             font-family: 'Crimson Text', serif; 
-            background: #f4f1e8;
+            background: #1a1a2e;
             background-image: 
-                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(114, 47, 55, 0.1) 0%, transparent 50%),
-                linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.05) 50%, transparent 100%);
+                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(114, 47, 55, 0.08) 0%, transparent 50%),
+                linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.03) 50%, transparent 100%);
         }
         
         .arabic { 
@@ -120,6 +120,10 @@
         .text-burgundy { color: var(--burgundy); }
         .text-sepia { color: var(--sepia); }
         
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
         .decorative-line {
             height: 2px;
             background: linear-gradient(90deg, transparent, var(--gold), var(--burgundy), var(--gold), transparent);
@@ -133,7 +137,7 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+<body class="min-h-screen">
     <div class="container mx-auto px-4 py-8 max-w-5xl">
         <!-- Header -->
         <div class="text-center mb-12">
@@ -142,7 +146,7 @@
                     تعلم العربية
                 </h1>
                 <div class="decorative-line"></div>
-                <h2 class="text-3xl font-semibold text-burgundy mb-4">Изучение арабского языка</h2>
+                <h2 class="text-4xl font-bold mb-4" style="color: #FFD700; text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 10px rgba(255,215,0,0.5);">Учебник арабского языка</h2>
                 <p class="text-sepia text-lg italic">مرحباً بك في رحلة تعلم اللغة العربية</p>
                 <p class="text-ink">Добро пожаловать в путешествие изучения арабского языка</p>
             </div>
@@ -195,6 +199,30 @@
                             <h3 class="text-xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">الدرس الثالث</h3>
                             <h4 class="text-lg font-semibold text-burgundy mb-3">Урок 3</h4>
                             <p class="text-sepia text-sm">أسماء الإشارة<br>Указательные местоимения</p>
+                        </div>
+                    </div>
+                    
+                    <div class="parchment-bg border-2 border-gold rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer" onclick="enterLesson(4)">
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">الدرس الرابع</h3>
+                            <h4 class="text-lg font-semibold text-burgundy mb-3">Урок 4</h4>
+                            <p class="text-sepia text-sm">مَنْ؟<br>Кто?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="parchment-bg border-2 border-gold rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer" onclick="enterLesson(5)">
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">الدرس الخامس</h3>
+                            <h4 class="text-lg font-semibold text-burgundy mb-3">Урок 5</h4>
+                            <p class="text-sepia text-sm">مَا هَٰذَا؟<br>Что это?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="parchment-bg border-2 border-gold rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer" onclick="enterLesson(6)">
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold text-ink mb-2" style="font-family: 'Scheherazade New', serif;">الدرس السادس</h3>
+                            <h4 class="text-lg font-semibold text-burgundy mb-3">Урок 6</h4>
+                            <p class="text-sepia text-sm">أَيْنَ؟<br>Где?</p>
                         </div>
                     </div>
                 </div>
@@ -259,12 +287,12 @@
                     <div id="lessonQuizContent" class="text-center">
                         <div class="mb-8">
                             <h3 class="text-xl font-semibold mb-6 text-ink">ترجم إلى الروسية / Переведите на русский:</h3>
-                            <div class="parchment-bg border-2 border-gold rounded-lg p-6 mb-6 max-w-md mx-auto">
-                                <div id="lessonQuizQuestion" class="arabic text-4xl text-ink">هُوَ كَبِير</div>
+                            <div class="bg-gradient-to-br from-gold to-burgundy border-3 border-gold rounded-xl p-8 mb-6 max-w-md mx-auto shadow-lg">
+                                <div id="lessonQuizQuestion" class="arabic text-4xl text-parchment font-bold text-shadow">هُوَ كَبِير</div>
                             </div>
                         </div>
                         
-                        <div id="lessonQuizOptions" class="space-y-3 max-w-md mx-auto">
+                        <div id="lessonQuizOptions" class="space-y-2 max-w-md mx-auto">
                             <!-- Quiz options will be populated by JavaScript -->
                         </div>
                     </div>
@@ -303,12 +331,12 @@
                 <div id="globalQuizContent" class="text-center">
                     <div class="mb-8">
                         <h3 id="globalQuizType" class="text-xl font-semibold mb-6 text-ink">ترجم إلى الروسية / Переведите на русский:</h3>
-                        <div class="parchment-bg border-2 border-gold rounded-lg p-6 mb-6 max-w-2xl mx-auto">
-                            <div id="globalQuizQuestion" class="arabic text-4xl text-ink">هُوَ كَبِير</div>
+                        <div class="bg-gradient-to-br from-gold to-burgundy border-3 border-gold rounded-xl p-8 mb-6 max-w-2xl mx-auto shadow-lg">
+                            <div id="globalQuizQuestion" class="arabic text-4xl text-parchment font-bold text-shadow">هُوَ كَبِير</div>
                         </div>
                     </div>
                     
-                    <div id="globalQuizOptions" class="space-y-3 max-w-2xl mx-auto">
+                    <div id="globalQuizOptions" class="space-y-2 max-w-2xl mx-auto">
                         <!-- Quiz options will be populated by JavaScript -->
                     </div>
                     
@@ -517,6 +545,79 @@
                     { arabic: 'هَٰؤُلَاءِ نِسَاءٌ طِوَالٌ', russian: 'Это высокие женщины' },
                     { arabic: 'هَٰذِهِ اِمْرَأَةٌ قَصِيرَةٌ', russian: 'Это низкая женщина' },
                     { arabic: 'هَٰؤُلَاءِ نِسَاءٌ قِصَارٌ', russian: 'Это низкие женщины' }
+                ]
+            },
+            4: {
+                title: { arabic: 'الدَّرْسُ الرَّابِعُ: مَنْ؟', russian: 'Урок четвертый: Кто?' },
+                words: [
+                    { arabic: 'مُعَلِّمٌ', russian: 'учитель', type: 'существительное' },
+                    { arabic: 'مُعَلِّمَةٌ', russian: 'учительница', type: 'существительное' },
+                    { arabic: 'تِلْمِيذٌ', russian: 'ученик', type: 'существительное' },
+                    { arabic: 'تِلْمِيذَةٌ', russian: 'ученица', type: 'существительное' },
+                    { arabic: 'مَنْ؟', russian: 'кто?', type: 'вопросительное слово' }
+                ],
+                sentences: [
+                    { arabic: 'مَنْ هُوَ؟', russian: 'Кто он?' },
+                    { arabic: 'مَنْ هِيَ؟', russian: 'Кто она?' },
+                    { arabic: 'مَنْ أَنْتَ؟', russian: 'Кто ты?' },
+                    { arabic: 'مَنْ أَنْتِ؟', russian: 'Кто ты?' },
+                    { arabic: 'مَنْ أَنَا؟', russian: 'Кто я?' },
+                    { arabic: 'مَنْ نَحْنُ؟', russian: 'Кто мы?' },
+                    { arabic: 'هُوَ مُعَلِّمٌ', russian: 'Он учитель' },
+                    { arabic: 'هِيَ مُعَلِّمَةٌ', russian: 'Она учительница' },
+                    { arabic: 'أَنْتَ تِلْمِيذٌ', russian: 'Ты ученик' },
+                    { arabic: 'أَنْتِ تِلْمِيذَةٌ', russian: 'Ты ученица' }
+                ]
+            },
+            5: {
+                title: { arabic: 'الدَّرْسُ الخَامِسُ: مَا هَٰذَا؟', russian: 'Урок пятый: Что это?' },
+                words: [
+                    { arabic: 'كِتَابٌ', russian: 'книга', type: 'существительное' },
+                    { arabic: 'دَفْتَرٌ', russian: 'тетрадь', type: 'существительное' },
+                    { arabic: 'مِحْفَظَةٌ', russian: 'портфель', type: 'существительное' },
+                    { arabic: 'قَلَمٌ', russian: 'ручка, карандаш', type: 'существительное' },
+                    { arabic: 'مَا؟', russian: 'что?', type: 'вопросительное слово' },
+                    { arabic: 'مَا هَٰذَا؟', russian: 'что это?', type: 'вопросительная фраза' },
+                    { arabic: 'لِمَنْ؟', russian: 'чей?', type: 'вопросительное слово' },
+                    { arabic: 'لِلْمُعَلِّمِ', russian: 'учителя', type: 'предложная фраза' }
+                ],
+                sentences: [
+                    { arabic: 'مَا هَٰذَا؟', russian: 'Что это?' },
+                    { arabic: 'هَٰذَا كِتَابٌ', russian: 'Это книга' },
+                    { arabic: 'هَٰذَا دَفْتَرٌ', russian: 'Это тетрадь' },
+                    { arabic: 'هَٰذِهِ مِحْفَظَةٌ', russian: 'Это портфель' },
+                    { arabic: 'هَٰذَا قَلَمٌ', russian: 'Это ручка' },
+                    { arabic: 'لِمَنْ هَٰذَا؟', russian: 'Чье это?' },
+                    { arabic: 'لِلْمُعَلِّمِ', russian: 'Учителя' },
+                    { arabic: 'هَٰذَا كِتَابُ الْمُعَلِّمِ', russian: 'Это книга учителя' },
+                    { arabic: 'هَٰذِهِ مِحْفَظَةُ التِّلْمِيذِ', russian: 'Это портфель ученика' }
+                ]
+            },
+            6: {
+                title: { arabic: 'الدَّرْسُ السَّادِسُ: أَيْنَ؟', russian: 'Урок шестой: Где?' },
+                words: [
+                    { arabic: 'بَيْتٌ', russian: 'дом', type: 'существительное' },
+                    { arabic: 'حُجْرَةٌ', russian: 'комната', type: 'существительное' },
+                    { arabic: 'مَدْرَسَةٌ', russian: 'школа', type: 'существительное' },
+                    { arabic: 'فَصْلٌ', russian: 'класс', type: 'существительное' },
+                    { arabic: 'ذَٰلِكَ', russian: 'вон тот, вон то', type: 'указательное местоимение' },
+                    { arabic: 'تِلْكَ', russian: 'та', type: 'указательное местоимение' },
+                    { arabic: 'أُولَٰئِكَ', russian: 'те', type: 'указательное местоимение' },
+                    { arabic: 'أَيْنَ؟', russian: 'где?', type: 'вопросительное слово' },
+                    { arabic: 'هُنَا', russian: 'здесь', type: 'наречие места' },
+                    { arabic: 'هُنَاكَ', russian: 'там', type: 'наречие места' },
+                    { arabic: 'فِي', russian: 'в', type: 'предлог' },
+                    { arabic: 'فِي الْمَدْرَسَةِ', russian: 'в школе', type: 'предложная фраза' }
+                ],
+                sentences: [
+                    { arabic: 'أَيْنَ الْبَيْتُ؟', russian: 'Где дом?' },
+                    { arabic: 'أَيْنَ الْمَدْرَسَةُ؟', russian: 'Где школа?' },
+                    { arabic: 'هَٰذَا بَيْتٌ', russian: 'Это дом' },
+                    { arabic: 'تِلْكَ مَدْرَسَةٌ', russian: 'Та школа' },
+                    { arabic: 'هُنَا فَصْلٌ', russian: 'Здесь класс' },
+                    { arabic: 'هُنَاكَ حُجْرَةٌ', russian: 'Там комната' },
+                    { arabic: 'الْمُعَلِّمُ فِي الْفَصْلِ', russian: 'Учитель в классе' },
+                    { arabic: 'التِّلْمِيذُ فِي الْمَدْرَسَةِ', russian: 'Ученик в школе' }
                 ]
             }
         };
@@ -753,7 +854,7 @@
             
             options.forEach(option => {
                 const button = document.createElement('button');
-                button.className = 'w-full p-4 text-center parchment-bg border-2 border-sepia rounded-lg hover:border-gold hover:bg-parchment-dark transition-all font-medium text-ink';
+                button.className = 'w-full p-3 text-center bg-parchment-dark border-2 border-sepia rounded-lg hover:border-gold hover:bg-parchment transition-all font-medium text-ink hover:shadow-md';
                 button.textContent = option;
                 button.onclick = () => selectLessonAnswer(option, correctAnswer);
                 container.appendChild(button);
@@ -772,46 +873,49 @@
             const buttons = document.querySelectorAll('#lessonQuizOptions button');
             buttons.forEach(btn => btn.style.pointerEvents = 'none');
             
-            // Highlight the selected answer
+            // Highlight the selected answer with bright colors
             const selectedButton = Array.from(buttons).find(btn => btn.textContent === selected);
             if (selectedButton) {
                 if (isCorrect) {
-                    selectedButton.style.backgroundColor = 'rgba(34, 197, 94, 0.3)';
+                    selectedButton.style.backgroundColor = '#22c55e';
                     selectedButton.style.borderColor = '#16a34a';
+                    selectedButton.style.color = 'white';
+                    selectedButton.style.boxShadow = '0 0 20px rgba(34, 197, 94, 0.6)';
                 } else {
-                    selectedButton.style.backgroundColor = 'rgba(239, 68, 68, 0.3)';
+                    selectedButton.style.backgroundColor = '#ef4444';
                     selectedButton.style.borderColor = '#dc2626';
+                    selectedButton.style.color = 'white';
+                    selectedButton.style.boxShadow = '0 0 20px rgba(239, 68, 68, 0.6)';
                     
                     // Also highlight the correct answer
                     const correctButton = Array.from(buttons).find(btn => btn.textContent === correct);
                     if (correctButton) {
-                        correctButton.style.backgroundColor = 'rgba(34, 197, 94, 0.3)';
+                        correctButton.style.backgroundColor = '#22c55e';
                         correctButton.style.borderColor = '#16a34a';
+                        correctButton.style.color = 'white';
+                        correctButton.style.boxShadow = '0 0 20px rgba(34, 197, 94, 0.6)';
                     }
                 }
             }
             
-            // Auto-advance to next question after delay with animation
+            // Auto-advance to next question quickly
             setTimeout(() => {
-                // Add fade out animation
-                document.getElementById('lessonQuizContent').style.opacity = '0';
-                document.getElementById('lessonQuizContent').style.transform = 'translateY(-20px)';
-                
-                setTimeout(() => {
-                    currentQuizIndex++;
-                    generateLessonQuiz();
-                    
-                    // Fade in new question
-                    document.getElementById('lessonQuizContent').style.opacity = '1';
-                    document.getElementById('lessonQuizContent').style.transform = 'translateY(0)';
-                }, 300);
-            }, 800);
+                currentQuizIndex++;
+                generateLessonQuiz();
+            }, 400);
         }
 
 
 
         function showLessonQuizResults() {
             const accuracy = Math.round((quizScore / totalQuizzes) * 100);
+            
+            // Check if lesson is completed (100% accuracy)
+            if (accuracy === 100) {
+                lessonCompletion[currentLesson] = true;
+                // Save immediately when lesson is completed
+                saveProgress();
+            }
             
             // Wait a moment before showing results
             setTimeout(() => {
@@ -820,9 +924,7 @@
                 
                 const resultMessage = document.getElementById('lessonResultMessage');
                 
-                // Check if lesson is completed (100% accuracy)
                 if (accuracy === 100) {
-                    lessonCompletion[currentLesson] = true;
                     resultMessage.innerHTML = `
                         مبروك! الدرس مكتمل! / Поздравляем! Урок завершен!<br>
                         <small class="text-sepia">النتيجة: ${quizScore}/${totalQuizzes} (${accuracy}%) / Результат: ${quizScore}/${totalQuizzes} (${accuracy}%)</small><br>
@@ -847,7 +949,7 @@
             
             // Collect all sentences from completed lessons
             globalQuizQuestions = [];
-            for (let i = 1; i <= 3; i++) {
+            for (let i = 1; i <= 6; i++) {
                 globalQuizQuestions.push(...lessonsData[i].sentences);
             }
             
@@ -894,7 +996,7 @@
             // Generate options
             const correctAnswer = sentence.russian;
             const allSentences = [];
-            for (let i = 1; i <= 3; i++) {
+            for (let i = 1; i <= 6; i++) {
                 allSentences.push(...lessonsData[i].sentences);
             }
             
@@ -911,7 +1013,7 @@
             
             options.forEach(option => {
                 const button = document.createElement('button');
-                button.className = 'w-full p-4 text-center parchment-bg border-2 border-sepia rounded-lg hover:border-gold hover:bg-parchment-dark transition-all font-medium text-ink';
+                button.className = 'w-full p-3 text-center bg-parchment-dark border-2 border-sepia rounded-lg hover:border-gold hover:bg-parchment transition-all font-medium text-ink hover:shadow-md';
                 button.textContent = option;
                 button.onclick = () => selectGlobalAnswer(option, correctAnswer);
                 container.appendChild(button);
@@ -1004,40 +1106,36 @@
             const buttons = document.querySelectorAll('#globalQuizOptions button');
             buttons.forEach(btn => btn.style.pointerEvents = 'none');
             
-            // Highlight the selected answer
+            // Highlight the selected answer with bright colors
             const selectedButton = Array.from(buttons).find(btn => btn.textContent === selected);
             if (selectedButton) {
                 if (isCorrect) {
-                    selectedButton.style.backgroundColor = 'rgba(34, 197, 94, 0.3)';
+                    selectedButton.style.backgroundColor = '#22c55e';
                     selectedButton.style.borderColor = '#16a34a';
+                    selectedButton.style.color = 'white';
+                    selectedButton.style.boxShadow = '0 0 20px rgba(34, 197, 94, 0.6)';
                 } else {
-                    selectedButton.style.backgroundColor = 'rgba(239, 68, 68, 0.3)';
+                    selectedButton.style.backgroundColor = '#ef4444';
                     selectedButton.style.borderColor = '#dc2626';
+                    selectedButton.style.color = 'white';
+                    selectedButton.style.boxShadow = '0 0 20px rgba(239, 68, 68, 0.6)';
                     
                     // Also highlight the correct answer
                     const correctButton = Array.from(buttons).find(btn => btn.textContent === correct);
                     if (correctButton) {
-                        correctButton.style.backgroundColor = 'rgba(34, 197, 94, 0.3)';
+                        correctButton.style.backgroundColor = '#22c55e';
                         correctButton.style.borderColor = '#16a34a';
+                        correctButton.style.color = 'white';
+                        correctButton.style.boxShadow = '0 0 20px rgba(34, 197, 94, 0.6)';
                     }
                 }
             }
             
-            // Auto-advance to next question after delay with animation
+            // Auto-advance to next question quickly
             setTimeout(() => {
-                // Add fade out animation
-                document.getElementById('globalQuizContent').style.opacity = '0';
-                document.getElementById('globalQuizContent').style.transform = 'translateY(-20px)';
-                
-                setTimeout(() => {
-                    currentGlobalQuizIndex++;
-                    generateGlobalQuiz();
-                    
-                    // Fade in new question
-                    document.getElementById('globalQuizContent').style.opacity = '1';
-                    document.getElementById('globalQuizContent').style.transform = 'translateY(0)';
-                }, 300);
-            }, 800);
+                currentGlobalQuizIndex++;
+                generateGlobalQuiz();
+            }, 400);
         }
 
         function nextGlobalQuiz() {
@@ -1097,7 +1195,7 @@
         function populateDictionaryList() {
             // Collect words only from completed lessons
             const allWords = [];
-            for (let lessonNum = 1; lessonNum <= 3; lessonNum++) {
+            for (let lessonNum = 1; lessonNum <= 6; lessonNum++) {
                 // Only include words from completed lessons
                 if (lessonCompletion[lessonNum]) {
                     lessonsData[lessonNum].words.forEach((word, index) => {
@@ -1152,7 +1250,7 @@
             availableDictCards = [];
             const now = Date.now();
             
-            for (let lessonNum = 1; lessonNum <= 3; lessonNum++) {
+            for (let lessonNum = 1; lessonNum <= 6; lessonNum++) {
                 // Only include words from completed lessons
                 if (lessonCompletion[lessonNum]) {
                     lessonsData[lessonNum].words.forEach((word, index) => {
@@ -1249,6 +1347,9 @@
             stats.lastReview = Date.now();
             stats.nextReview = Date.now() + (intervalMinutes * 60 * 1000);
             
+            // Save progress immediately after card interaction
+            saveProgress();
+            
             // Disable buttons temporarily
             buttons.style.pointerEvents = 'none';
             
@@ -1267,20 +1368,37 @@
 
         // Initialize the application
         function initApp() {
-            // Load saved progress
-            const savedProgress = localStorage.getItem('arabicLearningProgress');
-            if (savedProgress) {
-                cardStats = JSON.parse(savedProgress);
-            }
-            
-            // Load lesson completion status
-            const savedCompletion = localStorage.getItem('arabicLessonCompletion');
-            if (savedCompletion) {
-                lessonCompletion = JSON.parse(savedCompletion);
+            try {
+                // Load saved progress with error handling
+                const savedProgress = localStorage.getItem('arabicLearningProgress');
+                if (savedProgress) {
+                    cardStats = JSON.parse(savedProgress);
+                    console.log('Progress loaded successfully');
+                }
+                
+                // Load lesson completion status
+                const savedCompletion = localStorage.getItem('arabicLessonCompletion');
+                if (savedCompletion) {
+                    lessonCompletion = JSON.parse(savedCompletion);
+                    console.log('Lesson completion loaded successfully');
+                }
+                
+                // Check last save time
+                const lastSave = localStorage.getItem('arabicLastSave');
+                if (lastSave) {
+                    const lastSaveTime = new Date(parseInt(lastSave));
+                    console.log('Last save:', lastSaveTime.toLocaleString());
+                }
+                
+            } catch (error) {
+                console.error('Error loading saved data:', error);
+                // Reset to defaults if corrupted
+                cardStats = {};
+                lessonCompletion = {};
             }
             
             // Initialize stats for all lessons
-            for (let lessonNum = 1; lessonNum <= 3; lessonNum++) {
+            for (let lessonNum = 1; lessonNum <= 6; lessonNum++) {
                 lessonsData[lessonNum].words.forEach((word, index) => {
                     const key = `lesson${lessonNum}_${index}`;
                     if (!cardStats[key]) {
@@ -1297,6 +1415,9 @@
             
             // Show lessons section by default
             showMainSection('lessons');
+            
+            // Initial save to ensure everything is stored
+            saveProgress();
         }
 
         // Initialize stats for current lesson
@@ -1315,14 +1436,33 @@
             });
         }
 
-        // Auto-save progress to localStorage
-        setInterval(() => {
-            localStorage.setItem('arabicLearningProgress', JSON.stringify(cardStats));
-            localStorage.setItem('arabicLessonCompletion', JSON.stringify(lessonCompletion));
-        }, 30000);
+        // Enhanced auto-save system with immediate saves on important actions
+        function saveProgress() {
+            try {
+                localStorage.setItem('arabicLearningProgress', JSON.stringify(cardStats));
+                localStorage.setItem('arabicLessonCompletion', JSON.stringify(lessonCompletion));
+                localStorage.setItem('arabicLastSave', Date.now().toString());
+                console.log('Progress saved successfully');
+            } catch (error) {
+                console.error('Failed to save progress:', error);
+            }
+        }
+
+        // Auto-save every 10 seconds instead of 30
+        setInterval(saveProgress, 10000);
+
+        // Save immediately on page unload
+        window.addEventListener('beforeunload', saveProgress);
+
+        // Save immediately on visibility change (when switching tabs/apps)
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                saveProgress();
+            }
+        });
         
         // Initialize the application
         initApp();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c6b9b1a091995c',t:'MTc1NzQyMTMyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c6d88c17e33410',t:'MTc1NzQyMjU4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
